@@ -44,6 +44,11 @@ function postResults (){
             var stillHolder = giphy[i].images.fixed_width_still.url;
             var animatedHolder = giphy[i].images.fixed_width.url;
             console.log(stillHolder);
+            var divCard = $("<div>");
+            var divText = $("<div>");
+            var p = $("<span>");
+            $(divCard).addClass("card");
+            $(divCard).attr("style", "width: 18rem;");
             var img = $("<img>");
             $(img).attr("data-still", stillHolder);
             $(img).addClass("gif");
@@ -51,10 +56,24 @@ function postResults (){
             $(img).attr("data-animate", animatedHolder);
             $(img).attr("data-rating", rating);
             $(img).attr("src", stillHolder);
-            $(".photos-div").prepend(img);
+            $(divCard).append(img);
+
+            $(divText).addClass("card-body");
+            $(p).text("Rated: " + giphy[i].rating);
+            console.log(p);
+            $(p).addClass("card-text");
+            $(divText).append(p);
+            $(divCard).append(divText);
+            $(".photos-div").prepend(divCard);            
         }
         });
 }
+{/* <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div> */}
 
 function gifChanger (){
     if($(this).attr("data-state") === "still"){
