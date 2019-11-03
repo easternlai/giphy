@@ -44,27 +44,21 @@ function postResults (){
             var stillHolder = giphy[i].images.fixed_width_still.url;
             var animatedHolder = giphy[i].images.fixed_width.url;
             console.log(stillHolder);
-            var divCard = $("<div>");
-            var divText = $("<div>");
-            var p = $("<span>");
-            $(divCard).addClass("card");
-            $(divCard).attr("style", "width: 18rem;");
+            var div = $("<div>");
             var img = $("<img>");
+            var p = $("<span>");
             $(img).attr("data-still", stillHolder);
             $(img).addClass("gif");
             $(img).attr("data-state", "still");
             $(img).attr("data-animate", animatedHolder);
             $(img).attr("data-rating", rating);
             $(img).attr("src", stillHolder);
-            $(divCard).append(img);
-
-            $(divText).addClass("card-body");
+            $(div).append(img);
             $(p).text("Rated: " + giphy[i].rating);
-            console.log(p);
-            $(p).addClass("card-text");
-            $(divText).append(p);
-            $(divCard).append(divText);
-            $(".photos-div").prepend(divCard);            
+            $(p).addClass("p-div");
+            $(div).append(p);
+            $(div).addClass("card-div");
+            $(".photos-div").prepend(div);            
         }
         });
 }
