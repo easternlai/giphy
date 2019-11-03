@@ -1,10 +1,14 @@
 body {
-    background-color:#e3f542;
+    background-color:#ffe135;
 }
+
 
 #button-view{
     min-height: 100px;
-    background-color: #d13d3d;
+    background-color: #ff0800;
+    width: 100%;
+    padding: 5px;
+
 }
 
 .subject-button{
@@ -21,13 +25,32 @@ body {
 }
 
 .gif{
-    max-width: 250px;
-    border: 2px solid;
+    width: 150px;
+    height: 150px;
+    border: #FFA836 2px solid ;
 }
 
 span {
     display: block;
     color: white;
-    background-color: blue;
+    background-color: #4f86f7;
     text-align: center;
+}
+
+.right-panel{
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #fc5a8d;
+    color: white;
+}
+
+.subject-button { 
+    background-color: #71a95a;
+    color: white;
+}
+
+span{
+    padding: 5px 0px;
 }

@@ -30,7 +30,7 @@ function display_buttons (){
 // function that displays information of each button clicked
 function postResults (){
     var subject = $(this).attr("data-name");
-    // var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + subject + "&limit=1&api_key=TjZHvXe4jU4oDqHaGeSL2iB71sKmbBbI";
+
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + subject + "&limit=10&api_key=TjZHvXe4jU4oDqHaGeSL2iB71sKmbBbI";
 
     $.ajax({
@@ -83,6 +83,8 @@ function gifChanger (){
 
 function getSubject (){
     var newSubject = $("#input-subject").val();
-    fruits.push(newSubject);
-    display_buttons();
+    if(newSubject.length > 3){
+        fruits.push(newSubject);
+        display_buttons();
+    }
 }
