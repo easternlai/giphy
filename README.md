@@ -17,4 +17,4 @@
 ## Snapshot
 
 Inline-style: 
-![alt text](demo.jpg)
+![alt text](https://github.com/easternlai/giphy/blob/master/demo.JPG?raw=true)
